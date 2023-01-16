@@ -6,7 +6,7 @@ import (
 
 type Activity struct {
 	gorm.Model
-	UserId   int
-	Distance float32
-	Duration int64
+	UserId   int     `json:"userId" validate:"nonzero"`
+	Distance float32 `json:"distance" validate:"nonzero"`
+	Duration int64   `json:"duration" validate:"nonzero"`
 }
